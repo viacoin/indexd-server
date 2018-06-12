@@ -1,10 +1,10 @@
 # Indexd Server
-[![build status](https://secure.travis-ci.org/CounterpartyXCP/indexd-server.png)](http://travis-ci.org/CounterpartyXCP/indexd-server)
+[![build status](https://secure.travis-ci.org/viacoin/indexd-server.png)](http://travis-ci.org/viacoin/indexd-server)
 
-A [bitcoind](https://github.com/bitcoin/bitcoin) transaction server.
+A [viacoind](https://github.com/viacoin/viacoin) transaction server.
 
 ## Indexes
-This server provides an API for unspent transaction outputs for bitcoin addresses.  
+This server provides an API for unspent transaction outputs for viacoin addresses.  
 
 ## Configuration
 
@@ -12,15 +12,15 @@ This server provides an API for unspent transaction outputs for bitcoin addresse
 Copy `.env-example` to `.env` and modify the `.env` file as needed.  To use a custom configuration file, you can specify a file path by setting the `CONFIG_FILE` environment variable to the location of your environment config path.
 
 
-### bitcoin.conf configuration
-Your bitcoin server must have [ZMQ enabled](https://github.com/bitcoin/bitcoin/blob/master/doc/zmq.md).  Then configure `bitcoin.conf` to publish tx and block hashes, like so:
+### viacoin.conf configuration
+Your viacoin server must have [ZMQ enabled](https://github.com/viacoin/viacoin/blob/master/doc/zmq.md).  Then configure `viacoin.conf` to publish tx and block hashes, like so:
 
 ```
 zmqpubhashtx=tcp://127.0.0.1:38832
 zmqpubhashblock=tcp://127.0.0.1:38832
 ```
 
-The settings in bitcoin.conf are the "server" settings for the ZMQ publisher.  The ZMQ variable in the `.env` file is the "client" to subscribe to the messages published by bitcoin.
+The settings in viacoin.conf are the "server" settings for the ZMQ publisher.  The ZMQ variable in the `.env` file is the "client" to subscribe to the messages published by viacoin.
 
 
 ## Install
