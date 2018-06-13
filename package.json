@@ -9,6 +9,7 @@
   "author": "Counterparty Developers",
   "license": "MIT",
   "dependencies": {
+    "coininfo": "https://github.com/viacoin/coininfo.git",
     "bitcoinjs-lib": "^3.3.1",
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
